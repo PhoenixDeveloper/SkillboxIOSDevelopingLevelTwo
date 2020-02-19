@@ -26,7 +26,20 @@ import UIKit
  6.A Создайте протоколы для игры в шахматы против компьютера: протокол-делегат с функцией, через которую шахматный движок будет сообщать о ходе компьютера (с какой на какую клеточку); протокол для шахматного движка, в который передается ход фигуры игрока (с какой на какую клеточку), Double свойство, возвращающая текущую оценку позиции (без возможности изменения этого свойства) и свойство делегата;
  */
 
+typealias Position = (row: Int, column: Int)
+
 class Cell {
+    let row: Int
+    let column: Int
+
+    var position: Position {
+        return (row, column)
+    }
+
+    init(_ position: Position) {
+        self.row = position.row
+        self.column = position.column
+    }
 }
 
 class GameField {
@@ -34,10 +47,10 @@ class GameField {
 
     init(rowCount rows: Int, columnCount columns: Int) {
         var gameField: [[Cell]] = []
-        for _ in 0..<rows {
+        for rowPosition in 0..<rows {
             var row: [Cell] = []
-            for _ in 0..<columns {
-                row.append(Cell())
+            for columnPosition in 0..<columns {
+                row.append(Cell((rowPosition, columnPosition)))
             }
             gameField.append(row)
         }
@@ -47,15 +60,15 @@ class GameField {
 }
 
 protocol Moveble {
-    func move(from: Cell, to: Cell)
+    mutating func move(from: Cell, to: Cell)
 }
 
 protocol AIDelegate: Moveble {
 }
 
 protocol PlayerDelegate: Moveble {
-    var currentPosition: Double { get }
-    var delegate: Any? { get set } // не особо понял, что какой именно тип надо обязать реализовывать в протоколе игрока
+    var currentPosition: Position { get }
+    var delegate: Any? { get set } // не особо понял, какой именно тип надо обязать реализовывать в протоколе игрока
 }
 
 /*

@@ -14,6 +14,7 @@
 		33054E0B2454484500DBCFF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33054E0A2454484500DBCFF7 /* Assets.xcassets */; };
 		33054E0E2454484500DBCFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33054E0C2454484500DBCFF7 /* LaunchScreen.storyboard */; };
 		33054E162454487900DBCFF7 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33054E152454487900DBCFF7 /* CategoriesModel.swift */; };
+		33D1A4AC2454505D004DEFFC /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1A4AB2454505D004DEFFC /* CategoryTableViewCell.swift */; };
 		4B1EA80615AD27BB581422BA /* libPods-Lesson4MVCTask1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FF1B8FD9B3E91ABDE00DF8 /* libPods-Lesson4MVCTask1.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		33054E0D2454484500DBCFF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33054E0F2454484500DBCFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33054E152454487900DBCFF7 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		33D1A4AB2454505D004DEFFC /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C8FF1B8FD9B3E91ABDE00DF8 /* libPods-Lesson4MVCTask1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lesson4MVCTask1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17E4F22BF489DB2A4664780 /* Pods-Lesson4MVCTask1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lesson4MVCTask1.release.xcconfig"; path = "Target Support Files/Pods-Lesson4MVCTask1/Pods-Lesson4MVCTask1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				33054E0C2454484500DBCFF7 /* LaunchScreen.storyboard */,
 				33054E0F2454484500DBCFF7 /* Info.plist */,
 				33054E152454487900DBCFF7 /* CategoriesModel.swift */,
+				33D1A4AB2454505D004DEFFC /* CategoryTableViewCell.swift */,
 			);
 			path = Lesson4MVCTask1;
 			sourceTree = "<group>";
@@ -83,7 +86,6 @@
 				02500952AE0D75278417E9F1 /* Pods-Lesson4MVCTask1.debug.xcconfig */,
 				D17E4F22BF489DB2A4664780 /* Pods-Lesson4MVCTask1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -192,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D1A4AC2454505D004DEFFC /* CategoryTableViewCell.swift in Sources */,
 				33054E062454483F00DBCFF7 /* ViewController.swift in Sources */,
 				33054E022454483F00DBCFF7 /* AppDelegate.swift in Sources */,
 				33054E042454483F00DBCFF7 /* SceneDelegate.swift in Sources */,

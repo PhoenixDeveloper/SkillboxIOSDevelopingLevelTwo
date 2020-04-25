@@ -5,11 +5,15 @@ PODS:
   - DTModelStorage/Core (8.0.0)
   - DTTableViewManager (7.0.0):
     - DTModelStorage (~> 8.0.0)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
   - DTTableViewManager
+  - Kingfisher (~> 5.0)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
@@ -17,14 +21,16 @@ SPEC REPOS:
     - Alamofire
     - DTModelStorage
     - DTTableViewManager
+    - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   DTModelStorage: 3b86a1e37496532bbd74cadc5b9310238d5ba780
   DTTableViewManager: 0ada743292338c2e7b5494f41544afc9d3055fbb
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: cc647b86bf4ef0351a6ff4b69a104cd0ff80cb9c
+PODFILE CHECKSUM: 957326941a3b541108653e6927cc7b2855288b25
 
 COCOAPODS: 1.8.4

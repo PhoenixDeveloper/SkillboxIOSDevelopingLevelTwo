@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import DTTableViewManager
+import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DTTableViewManageable {
+
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        manager.register(CategoryTableViewCell.self)
+    }
+
+    private func getCategories() {
+        AF.request(URL(string: "https://blackstarshop.ru/index.php?route=api/v1/categories")!).responseJSON { json in
+            jso
+        }
     }
 
 

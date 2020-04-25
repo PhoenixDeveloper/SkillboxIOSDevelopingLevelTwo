@@ -9,5 +9,6 @@ target 'Lesson4MVCTask1' do
   pod 'Alamofire', '~> 5.1'
   pod 'SnapKit', '~> 5.0.0'
   pod 'DTTableViewManager'
+  pod 'Kingfisher', '~> 5.0'
 
 end

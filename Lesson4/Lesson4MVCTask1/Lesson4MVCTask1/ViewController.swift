@@ -18,11 +18,18 @@ class ViewController: UIViewController, DTTableViewManageable {
         super.viewDidLoad()
 
         manager.register(CategoryTableViewCell.self)
+        getCategories() { [unowned self] categories in
+            self.manager.memoryStorage.setItems(categories)
+        }
     }
 
-    private func getCategories() {
-        AF.request(URL(string: "https://blackstarshop.ru/index.php?route=api/v1/categories")!).responseJSON { json in
-            jso
+    private func getCategories(_ function: @escaping (([CategoriesModel]) -> Void)) {
+        AF.request(URL(string: "https://blackstarshop.ru/index.php?route=api/v1/categories")!).responseJSON { response in
+            if let data = response.data {
+                let parse = try! JSONDecoder().decode(Dictionary<String, CategoriesModel>.self, from: data)
+                let categories = parse.map({ $1 })
+                function(categories)
+            }
         }
     }
 

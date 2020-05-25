@@ -27,7 +27,7 @@ class CategoryTableViewCell: UITableViewCell, ModelTransfer {
 
     func update(with model: CategoriesModel) {
         nameLabel.text = model.name
-        categoryImageView.kf.setImage(with: URL(string: model.image))
+        categoryImageView.kf.setImage(with: URL(string: "https://blackstarshop.ru/\(model.image)"))
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -36,7 +36,7 @@ class CategoryTableViewCell: UITableViewCell, ModelTransfer {
         contentView.addSubview(nameLabel)
         contentView.addSubview(categoryImageView)
 
-
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {

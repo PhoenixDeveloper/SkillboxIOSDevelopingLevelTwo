@@ -10,7 +10,6 @@ import Foundation
 
 struct CategoriesModel: Codable {
     public var name: String
-    public var sortOrder: String
     public var image: String
     public var iconImage: String
     public var iconImageActive: String
@@ -18,9 +17,7 @@ struct CategoriesModel: Codable {
 }
 
 struct SubcatigoriesModel: Codable {
-    public var id: String
     public var iconImage: String
-    public var sortOrder: String
     public var name: String
     public var type: String
 }
